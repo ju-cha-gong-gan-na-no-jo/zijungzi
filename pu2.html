@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.wrap {
+  position: relative;
+  padding: 2%;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.chart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+span.center {
+  background: #F1F1F1;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #1F3158;
+  transform: translate(-50%, -50%); 
+}
+
+button {
+  width: 80px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+    </style>
+
+</head>
+<body>
+  
+    <div class='wrap'>
+        <div class='container'>
+          <div class="chart doughnut1"><span class="center">8</span></div>
+         
+        </div>
+      
+        <button onClick=replay()>
+          reset버튼
+        </button>
+      </div>
+      <script>
+        const chart1 = document.querySelector('.doughnut1');
+     
+      
+      const makeChart = (percent, classname, color) => {
+        let i = 1;
+        let chartFn = setInterval(function() {
+          if (i < percent) {
+            colorFn(i, classname, color);
+            i++;
+          } else {
+            clearInterval(chartFn);
+          }
+        }, 10);
+      }
+      
+      const colorFn = (i, classname, color) => {
+        classname.style.background = "conic-gradient(" + color + " 0% " + i + "%, #dedede " + i + "% 100%)";
+      }
+      
+      const replay = () => {
+        makeChart(80, chart1, '#1F3158');
+       
+      }
+      
+      makeChart(80, chart1, '#1F3158');
+     
+          </script>
+</body>
+</html>

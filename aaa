@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        @font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 400;
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+ src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "SegoeUI-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.animaapp.com/SegoeUI-Regular") format("truetype");
+}
+
+@font-face {
+  font-family: "SegoeUI-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://fonts.animaapp.com/SegoeUI-Bold") format("truetype");
+}
+
+.web-1920-2 {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  min-height: 2303px;
+  width: 1920px;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.overlap-group {
+  height: 2466px;
+  position: relative;
+  width: 100%;
+}
+
+.x19 {
+  background-color: 
+#fff2c3;
+  box-shadow: 0px 2px 5px 
+#00000029;
+  height: 961px;
+  left: 1344px;
+  position: absolute;
+  top: 1505px;
+  width: 463px;
+}
+
+.image {
+  cursor: pointer;
+  height: 38px;
+  left: 60px;
+  position: absolute;
+  top: 68px;
+  width: 40px;
+  
+  border-radius: 400px;
+  background-color: #fff;
+  
+}
+
+.x55 {
+  position : fixed; 
+  overflow: auto;
+  background-color:   #1F3158;;
+  border-radius: 20px;
+  box-shadow: 0px 3px 6px #00000029;
+  height: 600px;
+  left: 34px;
+  position: absolute;
+  top: 40px;
+  width: 85px;
+}
+
+.x13 {
+  background-color: #D3D3D3;
+  border-radius: 69.5px;
+  box-shadow: 0px 3px 6px 
+#00000029;
+  height: 139px;
+  left: 1034px;
+  position: absolute;
+  top: 755px;
+  width: 139px;
+}
+
+.x17 {
+  height: 1px;
+  left: 1588px;
+  position: absolute;
+  top: 402px;
+  width: 136px;
+}
+
+.text-1 {
+  color:#fff;
+  font-family: 'NanumBarunGothic';
+  font-size: 10px;
+  font-weight: 400;
+  left: 72px;
+  letter-spacing: 0;
+  line-height: 11px;
+  position: absolute;
+  top: 245px;
+  white-space: nowrap;
+}
+
+.x9-1 {
+  background-color: var(--white);
+  border-radius: 33px/32.5px;
+  height: 65px;
+  left: 63px;
+  position: absolute;
+  top: 78px;
+  width: 66px;
+}
+
+.text-3 {
+  left: 221px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: absolute;
+  top: 645px;
+  white-space: nowrap;
+}
+
+.x59 {
+  background-color: #20A8D8;
+  border-radius: 48px;
+  box-shadow: 0px 3px 6px 
+#00000029;
+  cursor: pointer;
+  height: 281px;
+  float: right;
+  margin-top: 209px;
+  margin-right: 30px;
+  width: 175px;
+}
+
+.x23 {
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 
+#00000029;
+  height: 961px;
+  left: 221px;
+  position: absolute;
+  top: 1505px;
+  width: 1073px;
+}
+
+.x22 {
+  background-color: var(--white);
+  box-shadow: 0px 2px 5px 
+#00000029;
+  height: 39px;
+  left: 1173px;
+  position: absolute;
+  top: 1534px;
+  width: 94px;
+}
+
+.image-2 {
+  cursor: pointer;
+  height: 48px;
+  left: 60px;
+  position: absolute;
+  top: 379px;
+  width: 50px;
+}
+
+
+
+.logout {
+  color: #fff;
+  cursor: pointer;
+  font-family: 'NanumBarunGothic';
+  font-size: 10px;
+  font-weight: 400;
+  left: 72px;
+  letter-spacing: 0;
+  line-height: 11px;
+  position: absolute;
+  top: 125px;
+  white-space: nowrap;
+}
+
+.x18 {
+  background-color: var(--white);
+  box-shadow: 0px 2px 5px 
+#00000029;
+  height: 315px;
+  left: 221px;
+  position: absolute;
+  top: 1076px;
+  width: 1595px;
+}
+
+.x28 {
+  background-color: var(--quill-gray);
+  height: 54px;
+  left: 221px;
+  position: absolute;
+  top: 1076px;
+  width: 1595px;
+}
+
+.image-3 {
+  border-radius: 9px;
+  
+  cursor: pointer;
+  height: 48px;
+  left: 60px;
+  position: absolute;
+  top: 279px;
+  width: 50px;
+}
+
+.image-5 {
+  cursor: pointer;
+  height: 52px;
+  left: 60px;
+  position: absolute;
+  top: 479px;
+  width: 54px;
+}
+
+.x16 {
+  height: 1px;
+  left: 1396px;
+  position: absolute;
+  top: 402px;
+  width: 136px;
+}
+
+.x56 {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 21px;
+  left: 59px;
+  position: absolute;
+  top: 164px;
+  width: 75px;
+}
+
+.x21 {
+  background-color: var(--white);
+  box-shadow: 0px 2px 5px 
+#00000029;
+  height: 39px;
+  left: 1068px;
+  position: absolute;
+  top: 1534px;
+  width: 95px;
+}
+
+.x57 {
+  
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 
+#00000029;
+  height: 244px;
+  left: 221px;
+  position: absolute;
+  top: 702px;
+  width: 1595px;
+}
+
+.image-1 {
+  cursor: pointer;
+  height: 48px;
+  left: 60px;
+  position: absolute;
+  top: 579px;
+  width: 50px;
+
+
+}
+
+.x14 {
+  align-items: flex-end;
+  display: flex;
+  height: 359px;
+  justify-content: space-between;
+  left: 502px;
+  position: absolute;
+  top: 131px;
+  width: 615px;
+}
+
+.x13-1 {
+  align-items: center;
+  display: flex;
+  height: 96px;
+  margin-bottom: 8px;
+  min-width: 159px;
+}
+
+.text-container {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -5px;
+  margin-left: 25px;
+  min-height: 98px;
+  width: 113px;
+}
+
+.text-5 {
+  letter-spacing: 0;
+  line-height: 17px;
+  margin-top: 48px;
+  min-height: 25px;
+  white-space: nowrap;
+}
+
+.text-4 {
+  letter-spacing: 0;
+  line-height: 17px;
+  min-height: 25px;
+  white-space: nowrap;
+}
+
+.flex-col {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 92px;
+  width: 21px;
+}
+
+.x60 {
+  background-color: var(--cloud-burst);
+  height: 21px;
+  margin-top: 50px;
+  width: 21px;
+}
+
+.x61 {
+  background-color: var(--cerulean);
+  height: 21px;
+  width: 21px;
+}
+
+.x4 {
+  border: 30px solid var(--cloud-burst);
+  border-radius: 179.5px;
+  width: 359px;
+}
+
+.x58 {
+  background-color: #20A8D8;
+  border-radius: 48px;
+  box-shadow: 0px 3px 6px 
+#00000029;
+  cursor: pointer;
+  height: 281px;
+  float: right;
+  margin-top: 209px;
+  margin-right: 100px;
+  width: 175px;
+}
+
+.text-2 {
+  left: 221px;
+  letter-spacing: 0;
+  line-height: 30px;
+  position: absolute;
+  top: 1019px;
+  white-space: nowrap;
+}
+
+.image-4 {
+  cursor: pointer;
+  height: 48px;
+  left: 60px;
+  position: absolute;
+  top: 185px;
+  width: 50px;
+}
+
+.x7 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  left: 281px;
+  min-height: 169px;
+  position: absolute;
+  top: 1169px;
+  width: 1475px;
+}
+
+.x12 {
+  height: 1px;
+  margin-left: 0.24px;
+  margin-top: 55px;
+  width: 1475px;
+}
+
+.x9 {
+  height: 1px;
+  width: 1475px;
+}
+
+.x7-item {
+  height: 1px;
+  margin-top: 55px;
+  width: 1475px;
+}
+
+.x12-1 {
+  background-color: #D3D3D3;
+  border-radius: 69.5px;
+  box-shadow: 0px 3px 6px 
+#00000029;
+  height: 139px;
+  left: 333px;
+  position: absolute;
+  top: 755px;
+  width: 139px;
+}
+
+.x62 {
+  background-color: #D3D3D3;
+  height: 89px;
+  left: 221px;
+  position: absolute;
+  top: 1507px;
+  width: 1073px;
+}
+
+.overlap-group1 {
+  align-items: flex-end;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px 
+#00000029;
+margin: 0; padding: 0;
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+  min-width: 100%px;
+
+}
+
+.x2 {
+  height: 35px;
+  width: 82px;
+  display: block; margin: 10px auto;
+}
+    </style>
+</head>
+<body style="background-color: #f1f1f1; background-color: #f1f1f1;margin-top: 0px;margin-left: 0px;margin-right: 0px;">
+    <div class="web-1920-2screen">
+        <div class="overlap-group1" >
+          <img class="x2" src="img/2.png" />
+        </div>
+        <div class="overlap-group">
+          <div class="x23"></div>
+          <div class="x62"></div>
+          <div class="x57"></div>
+          <div class="x19"></div>
+          <div class="x18"></div>
+          <div class="x7">
+            <img class="x9" src="file-10.png" /><img
+              class="x7-item"
+              src="file-10.png"
+            /><img class="x7-item" src="file-10.png" /><img
+              class="x12"
+              src="file-10.png"
+            />
+          </div>
+          <div class="x28"></div>
+          <div class="x21"></div>
+          <div class="x22"></div>
+      <div>
+        <div class="x55"></div>
+        <div class="logout">LOGOUT</div>
+        <img class="image" src="img/마이.png" />
+        <img class="image-1" src="img/설정.png"/>
+        <img class="image-2" src="img/통계.png" />
+        <img class="image-3" src="img/정산.png"/>
+        <img class="image-4" src="img/현황.png" />
+        <img class="image-5" src="img/등록.png" />
+        <div class="text-1">주차현황</div>
+
+      </div>
+          
+          <div class="x56border-1px-dove-gray"></div>
+          <div class="x9-1border-1px-dove-gray"></div>
+          <div class="x12-1"></div>
+          <div class="x13"></div>
+          <div class="x58"></div>
+          <div class="x59"></div>
+          <img class="x16" src="file-16.png" />
+          <img class="x17" src="file-16.png"/>
+          <div class="x14">
+            <div class="x4"></div>
+            <div class="x13-1">
+              <div class="flex-col">
+                <div class="x61"></div>
+                <div class="x60"></div>
+              </div>
+              <div class="text-container">
+                <div class="text-4segoeui-bold-dove-gray-17px">주차 가능 공간</div>
+                <div class="text-5segoeui-bold-dove-gray-17px">주차 공간</div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+</body>
+</html>

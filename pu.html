@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x55 {
+        
+        
+        overflow: auto;
+        background-color:   #1F3158;;
+        border-radius: 20px;
+        box-shadow: 0px 3px 6px #00000029;
+        height: 650px;
+        left: 54px;
+        position: fixed;
+        top: 80px;
+        width: 105px;
+      }
+
+      .text-1 {
+        color:#fff;
+        font-family: 'SpoqaHanSansNeo-Regular';
+        font-size: 10px;
+        font-weight: 400;
+        
+        letter-spacing: 0;
+        line-height: 11px;
+        position: absolute;
+     
+        
+        white-space: nowrap;
+      }
+
+      .logout {
+        color: #fff;
+        cursor: pointer;
+        font-family: 'SpoqaHanSansNeo-Regular';
+        font-size: 10px;
+        font-weight: 400;
+        left: 32px;
+        letter-spacing: 0;
+        line-height: 11px;
+        position: absolute;
+        top: 95px;
+        white-space: nowrap;
+      }
+      
+      .image {
+        cursor: pointer;
+        height: 38px;
+        position: absolute;
+        top: 38px;
+        width: 40px;
+        left: 32px;
+        border-radius: 400px;
+        background-color: #fff;
+        
+      }
+
+      .image-1 {
+        cursor: pointer;
+        height: 48px;
+        left: 27px;
+        position: absolute;
+        top: 549px;
+        width: 50px;
+
+
+      }
+
+      .image-2 {
+        cursor: pointer;
+        height: 48px;
+        left: 27px;
+        position: absolute;
+        top: 349px;
+        width: 50px;
+      }
+
+      .image-3 {
+        border-radius: 9px;
+        
+        cursor: pointer;
+        height: 48px;
+        left: 27px;
+        position: absolute;
+        top: 249px;
+        width: 50px;
+      }
+      .image-4 {
+        cursor: pointer;
+        height: 48px;
+        left: 27px;
+        position: absolute;
+        top: 145px;
+        width: 50px;
+      }
+      .image-5 {
+        cursor: pointer;
+        height: 52px;
+        left: 27px;
+        position: absolute;
+        top: 449px;
+        width: 54px;
+      }
+      
+
+
+/* 자식 메뉴 기본 상태(색) 지정 */
+.nav .child li a{ background: linear-gradient( to left, #629ECF, #735B92 ); color:rgb(255, 255, 255);}
+ 
+/* 링크 상태(색) 정의*/
+.nav .parent a:hover{ background: linear-gradient( to left, #629ECF, #735B92 );}
+.nav .child a:hover{ background: linear-gradient( to left, #629ECF, #735B92 );}
+ 
+/* 부모 목록 마우스 오버시 자식메뉴 표시 */
+ul.parent > li:hover > ul.child{ 
+  display: block; 
+  position: absolute;
+  left: 100px; top: 0;
+}
+ 
+/* 부모 목록의 위치 선언 */
+ul.parent > li{ position: relative;}
+/* 자식 목록 숨김 */
+ul.child{ display: none; }
+ 
+.plus{ float: right; } /* 메뉴 아이콘 배치 */
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="x55">
+        <div>
+          <img class="image" src="img/마이.png" />
+          <div class="logout">LOGOUT</div>
+          
+
+          <img class="image-1" src="img/설정.png"/>
+          <div class="text-1" style="left: 43px; top: 605px">설정</div>
+
+          <img class="image-2" src="img/통계.png" />
+          <div class="text-1" style="left: 43px; top: 405px">통계</div>
+
+          <img class="image-3" src="img/정산.png"/>
+          <div class="text-1" style="left: 43px; top: 305px">정산</div> 
+
+          <img class="image-4" src="img/현황.png" />
+          <div class="text-1" style="left: 34px; top: 205px">주차현황</div>
+          
+          <img class="image-5" src="img/등록.png" />
+          <div class="text-1" style="left: 43px; top: 505px">등록</div>
+        
+      </div>
+      </div>
+
+      </div>
+</body>
+</html>

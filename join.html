@@ -1,0 +1,172 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <!-- 아이디,비번 -->
+  <title>Join</title>
+ 
+  <style>
+      
+      
+    .cen{
+        margin: 500px auto auto auto;
+        text-align: center;
+    }
+   .input-box{  
+       position:relative; 
+       margin:10px 0;
+    }
+  
+    .input-box > input{ 
+        background:transparent; 
+        border:none; 
+        border-bottom: solid 1px rgb(206, 206, 206); padding:17px 0px 5px 0px; 
+        /* 입력했을 때 글씨 크기  */
+        font-size:8pt; width:50%; 
+    }
+  
+    input::placeholder{ 
+        color:transparent; 
+    }
+  
+    input:placeholder-shown + label{ 
+        color:rgb(206, 206, 206); 
+        /* id,pw 크기 */
+        font-size:10pt; 
+        top:10px; 
+    }
+  
+    input:focus + label, label{ 
+        color:rgb(206, 206, 206); 
+        font-size:10pt; 
+        pointer-events: none; 
+        position: absolute; 
+        left:0px; top:0px; 
+        transition: all 0.2s ease ; 
+        -webkit-transition: all 0.2s ease; 
+        -moz-transition: all 0.2s ease; 
+        -o-transition: all 0.2s ease; 
+    }
+    input:focus, input:not(:placeholder-shown){ 
+        border-bottom: solid 1px rgb(206, 206, 206); 
+        outline:none; 
+    }
+    .li{
+        float: left;
+  
+    }
+    .li2{
+        float: right;
+    }
+    @font-face {
+          font-family: 'GmarketSansMedium';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+      }
+    
+  
+      @font-face {
+          font-family: 'SpoqaHanSansNeo-Regular';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+      }
+    .btn {
+        position:relative;
+        transform: translateX(-50%);
+        margin-bottom:3% ;
+        width:50%;
+        height:35px;
+        background: linear-gradient(125deg,#add9ff,#6A7BB6,#462e74);
+        background-position: left;
+        background-size: 200%;
+        color:white;
+        font-weight: bold;
+        border:none;
+        cursor:pointer;
+        transition: 0.4s;
+        display:inline;
+        border-radius: 3px;
+        
+    }
+  
+    .btn:hover {
+        background-position: right;
+    }
+  
+  
+    /* .hd{
+        position: absolute;
+        color: #F19065;
+        left: 62px;
+        top: 185px;
+        font-size:23pt;
+        font-family: yg-jalnan;
+    } */
+  
+    
+     
+  </style>
+  
+  
+  
+</head>
+<body>
+    <!-- 배경 -->
+ 
+    <div style="border-radius: 10px; margin-left: 500px; margin-right: 500px; height: 500px;  padding-bottom: 0px; background-color: #fff; box-shadow:2px 2px 10px rgb(199, 199, 199);">
+    
+        <form action="" method="POST" class="cen" style="margin-top: 150px;" >
+            <br> <br>
+         <img class="img" src="img/1.png" alt="logo" width="115"  >
+         <br> <br>
+          <!-- 비번 -->
+          <div class="input-box"> 
+            <input id="username" type="text" name="username" placeholder="아이디" > 
+            <label for="username" style="font-family: SpoqaHanSansNeo-Regular; padding-left: 130px;">아이디</label> 
+        </div> 
+          <div class="input-box"> 
+            <input id="email" type="email" name="email" placeholder="이메일" required> 
+            <label for="email" style="font-family: SpoqaHanSansNeo-Regular; padding-left: 130px;">이메알</label> 
+        </div> 
+          <!-- 비번 -->
+          <div class="input-box"> 
+              <input id="password" type="password" name="password" placeholder="비밀번호" required> 
+              <label for="password" style="font-family: SpoqaHanSansNeo-Regular; padding-left: 130px;">비밀번호</label> 
+          </div>
+          <!-- 비번확인 --> 
+          <div class="input-box"> 
+              <input id="password" type="password" name="password" placeholder="비밀번호재확인" required> 
+              <label for="password" style="font-family: SpoqaHanSansNeo-Regular; padding-left: 130px;">비밀번호 재확인</label> 
+          </div> 
+          <!-- 로고 -->
+         
+            
+           
+      
+          <!-- 버튼 -->
+          <input onclick="window.open('login1.html')" style="font-family: GmarketSansMedium; font-size:9pt; top: 30px; border-bottom-width: 0px; margin-left: 250px;" type="submit" class="btn" value="JOIN"/>
+          
+        
+        </form>
+    
+        
+    
+        </div>
+
+ <!-- 로고 -->
+ 
+  
+  
+  
+
+
+</body>
+</html>

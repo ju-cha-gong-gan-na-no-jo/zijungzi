@@ -1,0 +1,212 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>달력 만들기 예제</title> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<style> 
+table {
+  width: 300px; 
+  height: 300px;   
+} 
+      td {  
+  
+  width:25px;  
+  height:25px;  
+    text-align: center; 
+} 
+      .selected {  
+  background:#20A8D8 !important;  
+} 
+      .pnt {  
+  cursor: pointer;  
+} 
+
+.red{ 
+  color:rgb(247, 157, 194); 
+} 
+.blue{ 
+  color:rgb(0, 176, 224); 
+} 
+.day{ 
+  cursor:pointer; 
+} 
+.day.block{ 
+  color:rgb(189, 189, 189); 
+  cursor:not-allowed; 
+} 
+.day.now{ 
+  background:#D3D3D3; 
+} 
+.wrap{ 
+  width: 35%;  
+  float: left; 
+} 
+  </style> 
+<script type="text/javascript"> 
+// Date 유틸 추가 
+// ex new Date().format('yyyyMMdd') -> 19900505 
+// ex new Date().format('yyyy년MM월dd일') -> 1990년05월05일 
+String.prototype.string = function(len){var s = '', i = 0; while (i++ < len) { s += this; } return s;}; 
+String.prototype.zf = function(len){return "0".string(len - this.length) + this;}; 
+Number.prototype.zf = function(len){return this.toString().zf(len);}; 
+Date.prototype.format = function(f) { 
+  if (!this.valueOf()) return " "; 
+  var d = this; 
+  return f.replace(/(yyyy|yy|MM|dd|hh|mm|ss|ms|MS)/gi, function($1) { 
+    switch ($1) { 
+      case "yyyy": return d.getFullYear(); 
+      case "yy": return (d.getFullYear() % 1000).zf(2); 
+      case "MM": return (d.getMonth() + 1).zf(2); 
+      case "dd": return d.getDate().zf(2); 
+      case "HH": return d.getHours().zf(2); 
+      case "hh": return ((h = d.getHours() % 12) ? h : 12).zf(2); 
+      case "mm": return d.getMinutes().zf(2); 
+      case "ss": return d.getSeconds().zf(2); 
+      case "ms": return d.getSeconds().zf(3); 
+      case "MS": return d.getSeconds(); 
+      default: return $1; 
+   } 
+}); 
+}; 
+$(function(){ 
+  //검색 버튼 클릭 이벤트 
+  
+ $(document).on("click",'.day',function(){   
+   if($(this).hasClass("block")) 
+   return false; 
+   // 선택된 날짜의 캘린더를 찾음 
+   // 동일 이벤트를.. 각각 처리하는 것은 낭비인듯 하여 한 이벤트에서 처리 가능하도록 하기 위하여... 
+   var calendarParents = $(this).parents(".calendar"); 
+   // 캘린더의 날짜 표기 인풋 박스  
+   var inputObj = calendarParents.find(".input"); 
+   // 상단 날짜 부분 + 선택한 일자를 합쳐 년월일을 만든다. 
+   var date = calendarParents.find(".tbCalendarYM").text().replace(/ /g,'') + $(this).text()+"일"; 
+   // text를 삽입 
+   inputObj.val(date) 
+   //이전에있던 요소의 selected 클래스를 지워 준다. 
+   calendarParents.find(".selected").removeClass("selected"); 
+   //신규로 클릭된 요소에 selected 클래스를 붙여준다. 
+   $(this).addClass("selected") 
+   // 현재 날짜를 가져옴 
+   var selectedDate = calendarParents.data("selected_date"); 
+   // 저장된 날짜가 없다면~ 오늘로 지정 
+   if (!selectedDate){ 
+     selectedDate = new Date().format("yyyyMMdd"); 
+     calendarParents.data("selected_date",selectedDate); 
+  } 
+  // 캘린더에 현재 설정한 날짜를 저장 해버림 
+  selectedDate = date.replace(/년|월|일/g,'') 
+  calendarParents.data("selected_date",selectedDate); 
+  // 캘린더별로 선택 날짜는 다음과 같이 호출 
+  // 시작 날짜 : ( $("#calendar1").data("selected_date")) 
+  // 종료 날짜 : ( $("#calendar2").data("selected_date")) 
+}); 
+}); 
+//이전 
+function moveCalendar(obj) {//이전달력 
+  // 선택된 날짜의 캘린더를 찾음 
+  // 동일 이벤트를.. 각각 처리하는 것은 낭비인듯 하여 한 이벤트에서 처리 가능하도록 하기 위하여... 
+  var calendarParents = $(obj).parents(".calendar"); 
+  // 캘린더에 현재 잘짜를 저장해버림 
+  var date = calendarParents.data("date"); 
+  // 저장된 날짜가 없다면~ 오늘로 지정 
+  if (!date){ 
+    date = new Date(); 
+    calendarParents.data("date",date); 
+ } 
+ // 클릭된 요소에 prev 클래스가 있다면, 이전 
+ if($(obj).hasClass("prev")){ 
+   date.setMonth(date.getMonth()-1); 
+   // 아니면 이후 
+   }else{ 
+   date.setMonth(date.getMonth()+1); 
+} 
+calendarParents.data("date",date); 
+buildCalendar(calendarParents,date); 
+} 
+// 캘린더를 그려줌 
+function buildCalendar(obj, date) {//현재달력  
+  //이번 달 
+  var nowMonth = new Date(date.getFullYear(), date.getMonth(), 1); 
+  //이번 달의 마지막 날 
+  var lastDay = new Date(date.getFullYear(), date.getMonth() + 1,0); 
+  $(obj).find(".tbCalendarYM").text(date.format("yyyy년 MM월")) 
+  //캘린더 테이블의 day row를 삭제 
+  $(obj).find(".day_row").remove(); 
+  //한 row에 요출될 html 스트링 
+  var rowHtml = "<tr class='day_row'>"+ 
+  "<td class='day block red'></td>"+ 
+  "<td class='day block'></td>"+ 
+  "<td class='day block'></td>"+ 
+  "<td class='day block'></td>"+ 
+  "<td class='day block'></td>"+ 
+  "<td class='day block'></td>"+ 
+  "<td class='day block blue'></td>"+ 
+  "</tr>"; 
+  // for문 돌면서 현재 그려주고 있는 row를 담고있을 rowObject 
+  var rowObject = null; 
+  // 첫날이 일요일이 아닐경우에만 
+  // 첫날이 일요일인 경우 for문에서 그려주므로... 
+  if(nowMonth.getDay() != 0){ 
+    rowObject = $(rowHtml); 
+    $(obj).find("table tbody").append(rowObject); 
+ } 
+ for(var i = 1; i <= lastDay.getDate(); i++){ 
+   nowMonth.setDate(i); 
+   var day = nowMonth.getDay(); 
+   // 일요일이 된 경우 한줄 추가 
+   if (day == 0){ 
+     rowObject = $(rowHtml); 
+     $(obj).find("table tbody").append(rowObject); 
+  } 
+  // 현재 일에 해당하는 td를 찾는다. 
+  var dayObj = rowObject.find("td:eq("+day+")"); 
+  dayObj.text(i) 
+  // 현재일자 
+  var date = nowMonth.format("yyyyMMdd"); 
+  // 오늘일자 
+  var now = new Date().format('yyyyMMdd'); 
+  // 오늘일자 이후라면, block를 없애 클릭이 가능하도록 한다. 
+  if (date >= now){ 
+    dayObj.removeClass("block") 
+ } 
+ // 오늘일자는 now를 붙여 노란색 배경으로 칠해준다. 
+ if (date == now){ 
+   dayObj.addClass("now") 
+} 
+} 
+}   
+  </script> 
+</head> 
+<body> 
+<div class="wrap" style="width: 35%; float: left;"> 
+<div id="calendar1" class="calendar" align='center'> 
+<div> 
+<table> 
+
+<tr> 
+<td><label onclick="moveCalendar(this,true)" class="pnt prev">◀</label></td> 
+<td align="center" class="tbCalendarYM" colspan="5">yyyy년 m월</td> 
+<td><label onclick="moveCalendar(this,false)" class="pnt next">▶</label></td> 
+</tr> 
+<tr> 
+<td class="red">일</td> 
+<td>월</td> 
+<td>화</td> 
+<td>수</td> 
+<td>목</td> 
+<td>금</td> 
+<td class="red">토</td> 
+</tr> 
+</table> 
+</div> 
+</div> 
+</div> 
+ 
+<script language="javascript" type="text/javascript"> 
+  buildCalendar("#calendar1",new Date()); 
+  buildCalendar("#calendar2",new Date()); 
+</script> 
+</body> 
+</html> 

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+              
+      
+      @font-face {
+              font-family: 'GmarketSansMedium';
+              src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+              font-weight: normal;
+              font-style: normal;
+          }
+        
+      
+          @font-face {
+              font-family: 'SpoqaHanSansNeo-Regular';
+              src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+              font-weight: normal;
+              font-style: normal;
+          }
+
+      .web-1920-2 {
+        align-items: flex-start;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        min-height: 2303px;
+        width: 1920px;
+      }
+
+      .hidden,
+      .hidden * {
+        pointer-events: none;
+        visibility: hidden;
+      }
+
+      .overlap-group {
+        
+        height: 2466px;
+        position: relative;
+        width: 100%;
+      }
+
+      .x19 {
+        background-color: 
+      #fff2c3;
+        box-shadow: 0px 2px 5px 
+      #00000029;
+        height: 761px;
+        left: 1000px;
+        position: absolute;
+        top: 1010px;
+        width: 400px;
+
+      }
+
+      .image {
+        cursor: pointer;
+        height: 38px;
+        position: absolute;
+        top: 38px;
+        width: 40px;
+        left: 32px;
+        border-radius: 400px;
+        background-color: #fff;
+        
+      }
+
+      .x55 {
+        
+        
+        overflow: auto;
+        background-color:   #1F3158;;
+        border-radius: 20px;
+        box-shadow: 0px 3px 6px #00000029;
+        height: 650px;
+        left: 54px;
+        position: fixed;
+        top: 80px;
+        width: 105px;
+      }
+
+      .x13 {
+        background-color: #D3D3D3;
+        border-radius: 69.5px;
+        box-shadow: 0px 3px 6px 
+      #00000029;
+        height: 110px;
+        left: 50px;
+        position: absolute;
+        top: 20px;
+        width: 110px;
+      }
+
+      .x17 {
+        height: 1px;
+        left: 1588px;
+        position: absolute;
+        top: 402px;
+        width: 136px;
+      }
+
+      .text-1 {
+        color:#fff;
+        font-family: 'SpoqaHanSansNeo-Regular';
+        font-size: 10px;
+        font-weight: 400;
+        
+        letter-spacing: 0;
+        line-height: 11px;
+        position: absolute;
+     
+        
+        white-space: nowrap;
+      }
+
+      .x9-1 {
+        background-color: var(--white);
+        border-radius: 33px/32.5px;
+        height: 65px;
+        left: 63px;
+        position: absolute;
+        top: 78px;
+        width: 66px;
+      }
+
+      .text-3 {
+        left: 221px;
+        letter-spacing: 0;
+        line-height: 30px;
+        position: absolute;
+        top: 645px;
+        white-space: nowrap;
+      }
+
+      .x59 {
+        background-color: #20A8D8;
+        border-radius: 28px;
+        box-shadow: 0px 3px 6px 
+      #00000029;
+      
+        cursor: pointer;
+        height: 171px;
+        float: right;
+        
+        margin-top: 50px;
+
+     
+        width: 105px;
+      }
+
+      .x23 {
+        background-color: #fff;
+        box-shadow: 0px 2px 5px 
+      #00000029;
+        height: 561px;
+        left: 221px;
+        position: absolute;
+        top: 1010px;
+        width: 750px;
+      }
+
+      .image-2 {
+        cursor: pointer;
+        height: 48px;
+        left: 27px;
+        position: absolute;
+        top: 349px;
+        width: 50px;
+      }
+
+
+
+      .logout {
+        color: #fff;
+        cursor: pointer;
+        font-family: 'SpoqaHanSansNeo-Regular';
+        font-size: 10px;
+        font-weight: 400;
+        left: 32px;
+        letter-spacing: 0;
+        line-height: 11px;
+        position: absolute;
+        top: 95px;
+        white-space: nowrap;
+      }
+
+      .x18 {
+        
+        overflow : scroll;
+        background-color: #fff;
+        box-shadow: 0px 2px 5px 
+      #00000029;
+        font-family: 'SpoqaHanSansNeo-Regular';
+        left: 221px;
+        position: absolute;
+        top: 652px;
+        height: 300px;
+        width: 1200px;
+
+
+      }
+
+
+      .image-3 {
+        border-radius: 9px;
+        
+        cursor: pointer;
+        height: 48px;
+        left: 27px;
+        position: absolute;
+        top: 249px;
+        width: 50px;
+      }
+
+      .image-5 {
+        cursor: pointer;
+        height: 52px;
+        left: 27px;
+        position: absolute;
+        top: 449px;
+        width: 54px;
+      }
+
+      .x16 {
+        height: 1px;
+        left: 1396px;
+        position: absolute;
+        top: 402px;
+        width: 136px;
+      }
+
+      .x56 {
+        background-color: var(--white);
+        border-radius: 16px;
+        height: 21px;
+        left: 59px;
+        position: absolute;
+        top: 164px;
+        width: 75px;
+      }
+
+
+      .x57 {
+        
+        background-color: #fff;
+        box-shadow: 0px 2px 5px 
+      #00000029;
+        
+        left: 221px;
+        position: absolute;
+        top: 452px;
+        height: 150px;
+        width: 1200px;
+      }
+
+      .image-1 {
+        cursor: pointer;
+        height: 48px;
+        left: 27px;
+        position: absolute;
+        top: 549px;
+        width: 50px;
+
+
+      }
+
+
+
+
+
+
+      .text-5 {
+        letter-spacing: 0;
+        line-height: 17px;
+        margin-top: 48px;
+        min-height: 25px;
+        white-space: nowrap;
+      }
+
+      .text-4 {
+        letter-spacing: 0;
+        line-height: 17px;
+        min-height: 25px;
+        white-space: nowrap;
+      }
+
+
+
+
+
+      .x58 {
+        background-color: #20A8D8;
+        border-radius: 28px;
+        box-shadow: 0px 3px 6px 
+      #00000029;
+        cursor: pointer;
+        height: 171px;
+        float: right;
+        margin-top: 50px;
+        
+        margin-left: 400px;
+        
+        width: 105px;
+      }
+
+      .text-2 {
+        left: 221px;
+        letter-spacing: 0;
+        line-height: 30px;
+        position: absolute;
+        top: 1019px;
+        white-space: nowrap;
+      }
+
+      .image-4 {
+        cursor: pointer;
+        height: 48px;
+        left: 27px;
+        position: absolute;
+        top: 145px;
+        width: 50px;
+      }
+
+
+      .x12 {
+        height: 1px;
+        margin-left: 0.24px;
+        margin-top: 55px;
+        width: 1475px;
+      }
+
+      .x9 {
+        height: 1px;
+        width: 1475px;
+      }
+
+
+      .x12-1 {
+        background-color: #D3D3D3;
+        border-radius: 69.5px;
+        box-shadow: 0px 3px 6px 
+      #00000029;
+        height: 110px;
+        right: 450px;
+        position: absolute;
+        top: 20px;
+        width: 110px;
+      }
+
+
+
+      .overlap-group1 {
+        align-items: flex-end;
+        background-color: #fff;
+        box-shadow: 0px 3px 6px 
+      #00000029;
+        margin: 0; padding: 0;
+        display: flex;
+        z-index: 1;
+        height: 50px;
+        position: fixed;
+        width: 100%;
+        justify-content: flex-end;
+
+
+      }
+
+      .x2 {
+        height: 35px;
+        width: 82px;
+        display: block; margin: 10px auto;
+      }
+          </style>
+          
+
+
+<!-- 차트 -->
+<style>
+  .wrap {
+    position: relative;
+    padding: 2%;
+    width: 1000px;
+    left: 400px;top: 50px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+
+    padding-left: 0px;
+
+  }
+  
+  .container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    
+    width: 1000px;
+
+  }
+  
+  .chart {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  span.center {
+    background: #F1F1F1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #1F3158;
+    transform: translate(-50%, -50%); 
+  }
+  
+  button {
+    width: 80px;
+    height: 30px;
+ 
+    margin-left: 110px;
+
+   
+    background-color: #D3D3D3;
+    border-radius: 10px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+  }
+      </style>
+  
+
+
+
+    <!-- 표 -->
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Amarante');
+
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    width: 1192px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    html { overflow-y: scroll; }
+    body { 
+
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    line-height: 1;
+    color: #585858;
+    padding: 22px 10px;
+    padding-bottom: 55px;
+    }
+
+    ::selection { background: #5f74a0; color: #fff; }
+    ::-moz-selection { background: #5f74a0; color: #fff; }
+    ::-webkit-selection { background: #5f74a0; color: #fff; }
+
+    br { display: block; line-height: 1.6em; } 
+
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+    ol, ul { list-style: none; }
+
+    input, textarea { 
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none; 
+    }
+
+    blockquote, q { quotes: none; }
+    blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+    strong, b { font-weight: bold; } 
+
+    table { border-collapse: collapse; border-spacing: 0; }
+    img { border: 0; max-width: 100%; }
+
+    h1 { 
+    font-family: 'Amarante', Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 3.6em;
+    line-height: 1.7em;
+    margin-bottom: 10px;
+    text-align: center;
+    }
+
+
+    /** page structure **/
+    #wrapper {
+    display: block;
+    width: 850px;
+    background: #fff;
+    margin: 0 auto;
+    padding: 10px 17px;
+
+    }
+
+    #keywords {
+    margin: 0 auto;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    }
+
+
+    #keywords thead {
+    cursor: pointer;
+    background: #D3D3D3;
+    }
+    #keywords thead tr th { 
+    font-weight: bold;
+    padding: 12px 30px;
+    padding-left: 42px;
+    }
+    #keywords thead tr th span { 
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    }
+
+
+    #keywords tbody tr td {
+    text-align: center;
+    padding: 15px 10px;
+    }
+    #keywords tbody tr td.lalign {
+    text-align: left;
+    }
+      </style>
+      <script>
+          $(function(){
+    $('#keywords').tablesorter(); 
+    });
+  </script>
+
+<style>
+  ::-webkit-scrollbar{width: 8px; height: 8px;}
+  ::-webkit-scrollbar-track{background-color: #ffffff;}
+  ::-webkit-scrollbar-thumb{background-color: #D3D3D3; border-radius: 7px;}
+
+  
+</style>
+</head>
+<body style="background-color: #f1f1f1;background-color: #f1f1f1;margin-top: 0px;margin-left: 0px;margin-right: 0px;padding-bottom: 0px;padding-top: 0px;padding-left: 0px;padding-right: 0px;">
+    <div class="web-1920-2screen">
+        <div class="overlap-group1" >
+          <img class="x2" src="img/2.png" />
+        </div>
+        <div class="overlap-group">
+
+          
+          <div class="x23">
+
+
+          </div>
+         
+          <div class="x57">
+            
+            <div class="x12-1"></div>
+            <div class="x13"></div>
+
+          </div>
+          <div class="x19"></div>
+
+
+
+
+          <!-- 차트 -->
+          <div class='wrap'>
+            <div class='container'>
+              <div class="chart doughnut1"><span class="center">8</span></div>
+              <div class="x58"></div>
+          <div class="x59"></div>
+            </div>
+          
+            <button style="font-family: SpoqaHanSansNeo-Regular;" onClick=replay()>
+             RESET
+            </button>
+          </div>
+          <script>
+            const chart1 = document.querySelector('.doughnut1');
+         
+          
+          const makeChart = (percent, classname, color) => {
+            let i = 1;
+            let chartFn = setInterval(function() {
+              if (i < percent) {
+                colorFn(i, classname, color);
+                i++;
+              } else {
+                clearInterval(chartFn);
+              }
+            }, 10);
+          }
+          
+          const colorFn = (i, classname, color) => {
+            classname.style.background = "conic-gradient(" + color + " 0% " + i + "%, #dedede " + i + "% 100%)";
+          }
+          
+          const replay = () => {
+            makeChart(80, chart1, '#1F3158');
+           
+          }
+          
+          makeChart(80, chart1, '#1F3158');
+         
+              </script>
+
+
+
+
+          <!-- 표 -->
+          <div class="x18">
+            <div>
+         
+         
+              <table id="keywords" cellspacing="0" cellpadding="0">
+                <thead>
+                  <tr>
+                    <th><span>Keywords</span></th>
+                    <th><span>Impressions</span></th>
+                    <th><span>Clicks</span></th>
+                    <th><span>CTR</span></th>
+                    <th><span>Rank</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="lalign">silly tshirts</td>
+                    <td>6,000</td>
+                    <td>110</td>
+                    <td>1.8%</td>
+                    <td>22.2</td>
+                  </tr>
+                  <tr>
+                    <td class="lalign">desktop workspace photos</td>
+                    <td>2,200</td>
+                    <td>500</td>
+                    <td>22%</td>
+                    <td>8.9</td>
+                  </tr>
+                  <tr>
+                    <td class="lalign">arrested development quotes</td>
+                    <td>13,500</td>
+                    <td>900</td>
+                    <td>6.7%</td>
+                    <td>12.0</td>
+                  </tr>
+                  <tr>
+                    <td class="lalign">popular web series</td>
+                    <td>8,700</td>
+                    <td>350</td>
+                    <td>4%</td>
+                    <td>7.0</td>
+                  </tr>
+                  <tr>
+                    <td class="lalign">2013 webapps</td>
+                    <td>9,900</td>
+                    <td>460</td>
+                    <td>4.6%</td>
+                    <td>11.5</td>
+                  </tr>
+               
+                </tbody>
+              </table>
+             </div> 
+
+          </div>
+     
+         
+          
+      <div>
+        <div class="x55">
+        <div>
+          <img class="image" src="img/마이.png" />
+          <div class="logout">LOGOUT</div>
+          
+
+          <img class="image-1" src="img/설정.png"/>
+          <div class="text-1" style="left: 43px; top: 605px">설정</div>
+
+          <img class="image-2" src="img/통계.png" />
+          <div class="text-1" style="left: 43px; top: 405px">통계</div>
+
+          <img class="image-3" src="img/정산.png"/>
+          <div class="text-1" style="left: 43px; top: 305px">정산</div> 
+
+          <img class="image-4" src="img/현황.png" />
+          <div class="text-1" style="left: 34px; top: 205px">주차현황</div>
+          
+          <img class="image-5" src="img/등록.png" />
+          <div class="text-1" style="left: 43px; top: 505px">등록</div>
+        
+      </div>
+      </div>
+
+      </div>
+          
+          <div class="x56border-1px-dove-gray"></div>
+          <div class="x9-1border-1px-dove-gray"></div>
+          
+          <!-- <div class="x58"></div>
+          <div class="x59"></div> -->
+          <img class="x16" src="file-16.png" />
+          <img class="x17" src="file-16.png"/>
+          
+        </div>
+      </div>
+
+      
+</body>
+</html>
